@@ -1,0 +1,9 @@
+key,value
+project_id,your-gcp-project-id
+dataset_id,marketing_analytics
+target_table,ga_sessions_daily
+start_date,2017-08-01
+end_date,2017-08-07
+report_spreadsheet_id,your-google-sheet-id
+report_range,report!A1
+

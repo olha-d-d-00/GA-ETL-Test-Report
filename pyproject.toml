@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ga-sample-etl"
+version = "0.1.0"
+description = "Small ETL pipeline for Google Analytics sample data, BigQuery and Google Sheets."
+requires-python = ">=3.11"
+dependencies = [
+    "google-api-python-client>=2.120.0",
+    "google-auth>=2.28.0",
+    "google-cloud-bigquery>=3.17.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
